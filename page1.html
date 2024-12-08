@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        label:hover {
+            background-color: #218838;
+        }
+        .uploaded-image {
+            margin-top: 10px;
+            max-width: 100%;
+        }
+        input[type="file"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sayfa 1</h1>
+        <p>Buraya görsel ekleyebilirsiniz:</p>
+        <label for="fileInput">Görsel Yükle</label>
+        <input type="file" id="fileInput" accept="image/*" onchange="displayImage(event)">
+        <div id="imagePreview"></div>
+    </div>
+
+    <script>
+        function displayImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imagePreview = document.getElementById('imagePreview');
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Yüklenen Görsel" class="uploaded-image">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
