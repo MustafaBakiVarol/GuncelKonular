@@ -3,166 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Projesi</title>
+    <title>Basit Web Sayfası</title>
     <style>
-        /* Genel Stil */
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
-
-        /* Başlık */
         header {
-            background: linear-gradient(to right, #4CAF50, #8BC34A);
-            color: white;
-            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
         }
-
-        /* Ana Konteyner */
-        .container {
-            margin: 20px auto;
-            max-width: 1200px;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Bölüm Başlıkları */
-        h2 {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 1.8rem;
-            color: #4CAF50;
-        }
-
-        h3 {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        /* Diyagramlar Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .diagram {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #fafafa;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        img {
-            width: 100%;
-            max-height: 200px;
-            object-fit: contain;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-
-        /* Trello Bölümü */
-        .trello {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .back-button {
-            display: block;
-            width: fit-content;
-            margin: 20px auto;
+        .buttons button {
             padding: 10px 20px;
-            background: #4CAF50;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
             color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        #content {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 200px;
             text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s;
         }
-
-        .back-button:hover {
-            background: #45a049;
-        }
-
     </style>
 </head>
 <body>
     <header>
-        <h1>AR Projesi - Diyagramlar ve Yönetim</h1>
+        <h1>Ana Sayfa Başlığı</h1>
+        <p>Buraya uzun yazılar ekleyebilirsiniz.</p>
     </header>
-
-    <div class="container">
-        <h2>Diyagramlar</h2>
-        <div class="grid">
-            <div class="diagram">
-                <h3>Class Diagram</h3>
-                <img src="C:\Users\asus\OneDrive\Belgeler\GitHub\GuncelKonular\GuncelKonular\bulut1.jpg" alt="Class Diagram">
-            </div>
-            <div class="diagram">
-                <h3>Use Case Diagram</h3>
-                <img src="C:\Users\asus\OneDrive\Belgeler\GitHub\GuncelKonular\GuncelKonular\bulut2.jpg" alt="Use Case Diagram">
-            </div>
-            <div class="diagram">
-                <h3>Activity Diagram</h3>
-                <img src="../diagrams/SutMiktari-activity.png" alt="Activity Diagram">
-            </div>
-            <div class="diagram">
-                <h3>Component Diagram</h3>
-                <img src="../diagrams/SutMiktari-component.png" alt="Component Diagram">
-            </div>
-            <div class="diagram">
-                <h3>Deployment Diagram</h3>
-                <img src="../diagrams/SutMiktari-deployment.png" alt="Deployment Diagram">
-            </div>
-            <div class="diagram">
-                <h3>Object Diagram</h3>
-                <img src="../diagrams/SutMiktari-object.png" alt="Object Diagram">
-            </div>
-            <div class="diagram">
-                <h3>Sequence Diagram</h3>
-                <img src="../diagrams/SutMiktari-sequence.png" alt="Sequence Diagram">
-            </div>
-            <div class="diagram">
-                <h3>State Diagram</h3>
-                <img src="../diagrams/SutMiktari-state.png" alt="State Diagram">
-            </div>
-        </div>
-
-        <div class="trello">
-            <h2>Trello Pano</h2>
-            <p>Panoya ulaşmak için <a href="https://trello.com/u/musvar23/boards" target="_blank">buraya tıklayın</a>.</p>
-        </div>
-
-        <a href="../index.html" class="back-button">Ana Sayfaya Dön</a>
+    <div class="buttons">
+        <button>Buton 1</button>
+        <button>Buton 2</button>
+        <button>Buton 3</button>
+    </div>
+    <div id="content">
+        <p>Bir butona tıklayın ve içerik yükleyin!</p>
     </div>
 </body>
 </html>
