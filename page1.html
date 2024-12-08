@@ -3,56 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayfa 1</title>
+    <title>Görsel Yükleme</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
         }
         label {
             display: inline-block;
+            margin-top: 10px;
             padding: 10px 15px;
-            background-color: #28a745;
+            background-color: #007BFF;
             color: white;
             border-radius: 5px;
             cursor: pointer;
         }
         label:hover {
+            background-color: #0056b3;
+        }
+        input[type="file"], input[type="text"] {
+            display: none;
+        }
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        .upload-section input[type="text"] {
+            display: inline-block;
+            width: calc(100% - 110px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #addImage {
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #addImage:hover {
             background-color: #218838;
         }
-        .uploaded-image {
-            margin-top: 10px;
-            max-width: 100%;
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
-        input[type="file"] {
-            display: none;
+        .image-item {
+            max-width: 200px;
+            text-align: center;
+        }
+        .image-item img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .image-item p {
+            margin-top: 5px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sayfa 1</h1>
-        <p>Buraya görsel ekleyebilirsiniz:</p>
-        <label for="fileInput">Görsel Yükle</label>
-        <input type="file" id="fileInput" accept="image/*" onchange="displayImage(event)">
-        <div id="imagePreview"></div>
+        <h1>Görselleri Yükle</h1>
+        <div class="upload-section">
+            <input type="text" id="imageTitle" placeholder="Görsel Başlığı Girin">
+            <input type="file" id="fileInput" accept="image/*">
+            <label for="fileInput">Görsel Seç</label>
+            <button id="addImage">Ekle</button>
+        </div>
+        <div id="gallery">
+            <!-- Yüklenen görseller burada görüntülenecek -->
+        </div>
     </div>
 
     <script>
-        function displayImage(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imagePreview = document.getElementById('imagePreview');
-                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Yüklenen Görsel" class="uploaded-image">`;
-                };
-                reader.readAsDataURL(file);
+        document.getElementById('addImage').addEventListener('click', function () {
+            const fileInput = document.getElementById('fileInput');
+            const imageTitle = document.getElementById('imageTitle').value;
+            const gallery = document.getElementById('gallery');
+
+            if (fileInput.files.length === 0 || !imageTitle.trim()) {
+                alert('Lütfen bir görsel ve başlık girin.');
+                return;
             }
-        }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const imageItem = document.createElement('div');
+                imageItem.className = 'image-item';
+                imageItem.innerHTML = `
+                    <img src="${e.target.result}" alt="Yüklenen Görsel">
+                    <p>${imageTitle}</p>
+                `;
+                gallery.appendChild(imageItem);
+            };
+
+            reader.readAsDataURL(file);
+
+            // Formu sıfırla
+            document.getElementById('imageTitle').value = '';
+            fileInput.value = '';
+        });
     </script>
 </body>
 </html>
