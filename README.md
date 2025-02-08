@@ -57,7 +57,7 @@ Uçak Oyunu projesi, çocuklar için eğlenceli ve eğitici artırılmış gerç
     2.Swot Analizi
   <table>
      <tr>
-       <td><img src="SwotAnaliz.png" alt="Swot Analizi" width="70%"></td>
+       <td><img src="SwotAnalizi.png" alt="Swot Analizi" width="70%"></td>
      </tr>
    </table>
 
