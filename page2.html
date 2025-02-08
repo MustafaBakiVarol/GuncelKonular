@@ -120,10 +120,37 @@
             background: #f9a509;
             transform: translateY(-2px);
         }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background: #0056b3;
+            border-radius: 5px;
+        }
+        .nav-links a:hover {
+            background: #003f7f;
+        }
 
     </style>
 </head>
 <body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="page4.html">Swot Analizi</a></li>
+            <li><a href="page3.html">Bulut Oyunu</a></li>
+            <li><a href="page2.html">Ucak Oyunu</a></li>
+        </ul>
+    </nav>  
     <header>
         <h1>AR Projesi - Diyagramlar ve Yönetim</h1>
     </header>
@@ -152,6 +179,10 @@
         <div class="trello">
             <h2>Trello Pano</h2>
             <p>Panoya ulaşmak için <a href="https://trello.com/b/6XYUOR3e/yazilim-muhendisligi-guncel-konular" target="_blank">buraya tiklayin</a>.</p>
+        </div>
+        <div class="InternetLink">
+            <h2>Ucak Oyunu Internet Linki</h2>
+            <p>Ucak Oyununa Ulasmak Icin<a href="https://create.overlyapp.com/webar/8e1176b4a1787a3a0967ed8ed24259ad61d6cc11?embed=true" target="_blank">buraya tiklayin</a>.</p>
         </div>
 
         <a href="index.html" class="back-button">Ana Sayfaya Dön</a>

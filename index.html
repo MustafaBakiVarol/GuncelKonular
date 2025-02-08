@@ -3,94 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
+    <title>AR Deneyimi</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #000000;
-        }
-        header {
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin-bottom: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
         h1 {
-            font-size: 36px;
-            color: #000000;
+            color: #333;
         }
-        h2 {
-            font-size: 28px;
-            color: #000000;
-            margin-top: 30px;
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h3 {
-            font-size: 22px;
-            margin-top: 20px;
+        .section h2 {
+            color: #007BFF;
         }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #000000;
-        }
-        .buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .buttons a {
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007BFF;
             color: white;
-            background-color: #000000;
+            text-decoration: none;
             border-radius: 5px;
         }
-        .buttons a:hover {
-            background-color: #000000;
+        .button:hover {
+            background: #0056b3;
         }
-        .upload-button {
-            background-color: #000000;
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
         }
-        .upload-button:hover {
-            background-color: #000000;
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background: #0056b3;
+            border-radius: 5px;
+        }
+        .nav-links a:hover {
+            background: #003f7f;
         }
     </style>
 </head>
 <body>
-    <div class="buttons">
-        <a href="page1.html">Cikolata Fabrikasi</a>
-        <a href="page2.html">Ucak Yolculugu</a>
-        <a href="page3.html">Bulut Islemleri</a>
-        <a href = "page4.html">Swot Analizi</a>
-        <!-- Yeni buton ekleniyor -->
-        <a href="lessons_1_20241113210805.xlsx" class="upload-button" target="_blank">Dokümanı Görüntüle</a>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="page4.html">Swot Analizi</a></li>
+            <li><a href="page3.html">Bulut Oyunu</a></li>
+            <li><a href="page2.html">Ucak Oyunu</a></li>
+        </ul>
+    </nav>  
+    </nav>
+    <div class="container">
+        <h1>AR Deneyimi</h1>
+        
+        <div class="section">
+            <h2>Mobil İçin AR Deneyimi</h2>
+            <ul>
+                <li>Overly uygulamasını indirin</li>
+                <li>AR tetikleyici görselleri taratıp oyunun tadını çıkarın.</li><br>
+                <img src="mobil1.jpg" alt="Oyun 1" width="350">
+                <img src="mobil2.jpg" alt="Oyun 1" width="350">
+            </ul>
+        </div>
+        <div class="section">
+            <h2>izlemek için linke tıklayınız:<h2>
+            <a href="https://www.youtube.com" target="_blank">YouTube'da İzle</a>
+        </div>
+        
+        <div class="section">
+            <h2>Web İçin AR Deneyimi</h2>
+            <p>Oyunları keşfetmek için aşağıdaki görsellere tıklayın:</p>
+            <a href="https://create.overlyapp.com/webar/8e1176b4a1787a3a0967ed8ed24259ad61d6cc11?embed=true ">
+                <img src="oyun1.png" alt="Oyun 1" width="370">
+            </a>
+            <a href="https://create.overlyapp.com/webar/63f83b67c8cae752099e32792c496030227e0333?embed=true ">
+                <img src="oyun2.png" alt="Oyun 2" width="370">
+            </a>
+        </div>
     </div>
-
-    <header>
-        <h1>Artırılmış Gerçeklik (AR) Hakkında</h1>
-        <p>Artırılmış gerçeklik (İngilizce: Augmented reality; AR), gerçek dünyadaki çevrenin ve içindekilerin, bilgisayar tarafından üretilen; ses, görüntü, grafik ve GPS verileriyle zenginleştirilerek meydana getirilen canlı veya dolaylı fiziksel görünümüdür. Bu kavram kısaca gerçekliğin bilgisayar tarafından değiştirilmesi ve artırılmasıdır. Teknoloji kişinin gerçekliğini zenginleştirme işlevini görür. Buna karşın sanal gerçeklikte ise gerçek dünya yerine tasarlanıp canlandırılmış bir dünya vardır.
-            Zenginleştirme gerçek zamanlı gerçekleşir ve çevredeki ögeler ile etkileşim içindedir. Gelişen zenginleştirilmiş gerçeklik teknolojisinin de yardımıyla kullanıcı etrafındaki bilgi ile etkileşime girebilir. Bulunulan çevreyle ilgili yapay bilgi ve ögeler gerçek dünyayla bağdaşabilir. Zenginleştirilmiş gerçeklik teriminin literatüre 1990 yılında Boeing üzerinde çalışan Thomas Caudell tarafından kazandırıldığına inanılır.</p>
-        
-        <h2>Artırılmış Gerçeklik Teknolojilerinin En Çok Kullanıldığı 5 Sektör</h2>
-        <p>Artırılmış gerçeklik örneğinden biri olan; "Aurasma" bir görüntü tanıma teknolojisidir. İşletmeler ve bireyler Aurasma'yı hem kendi artırılmış gerçeklik deneyimlerini oluşturmak ve paylaşmak, hem de çevrelerindeki gizli dijital içeriği keşfetmek için kullanır. Öğretmenler, bu platformu kullanan en etkin grup arasında yer almaktadır.
-            Artırılmış gerçeklik ile ilgili uygulamalar henüz çok yeni olsa da, dünyada bilişim sektörünü domine eden Microsoft ve Google gibi firmalar bu yeni teknolojiye büyük yatırımlar yapmaktadırlar. Google, 2012 yılında tanıttığı ve büyük ilgi çeken Glass projesini şimdilik rafa kaldırsa da, Mattel firmasıyla birlikte View Master gözlüğünün tanıtımını yaptı. Microsoft ise Windows 10 ve HoloLens ile 2016 yılından itibaren kullanıcılarına interaktif hologramlar sunmayı planlıyor. Marshall, L'Oréal Paris, Ray-Ban, Adidas, BMW, Volkswagen, Ford, Durex ve IKEA gibi sayısız uluslararası marka, artırılmış gerçeklik uygulamaları ile ürünlerinin tanıtımını interaktif ve eğlenceli hale getirmeye çalışmaktadırlar.</p>
-
-        <h3>1. AR Oyunları</h3>
-        <p>Oyun sektörü, artırılmış gerçeklik teknolojisinin öncüsü olmuştur. Özellikle 2016'da yayımlanan Pokemon Go mobil oyunu ile milyonlarca kullanıcı artırılmış gerçeklik teknolojisi ile tanıştı. Bu oyun, gerçek dünya ile sanal öğeleri birleştirerek oyunculara benzersiz bir deneyim sundu.</p>
-
-        <h3>2. AR Eğitim Uygulamaları</h3>
-        <p>AR teknolojisi eğitim alanında da büyük bir etkiye sahiptir. Öğrenciler, sanal öğelerle etkileşimde bulunarak, eğitim materyallerini daha iyi anlayabilir ve deneyimleyebilir. Örneğin, 3D AR modelleri ile bilimsel konular daha anlaşılır hale gelir.</p>
-
-        <h3>3. AR Sağlık Uygulamaları</h3>
-        <p>Artırılmış Gerçeklik, sağlık sektöründe de kullanılmaktadır. Cerrahlar, AR gözlükleri ile operasyonları daha verimli ve güvenli bir şekilde gerçekleştirebilirler. Ayrıca, medikal eğitimde de AR teknolojileri kullanılarak, öğrencilere daha interaktif ve uygulamalı eğitim verilmektedir.</p>
-
-        <h3>4. AR Mimari ve İnşaat</h3>
-        <p>AR teknolojisi, mimarlık ve inşaat sektörlerinde projelerin önceden sanal ortamda görselleştirilmesine olanak tanır. Bu sayede tasarımcılar, yapacakları projeleri daha net bir şekilde planlayabilirler.</p>
-
-        <h3>5. AR Perakende Uygulamaları</h3>
-        <p>Perakende sektöründe, müşterilerin ürünleri sanal olarak denemesi ve görmek için AR teknolojileri kullanılmaktadır. Örneğin, sanal makyaj denemeleri veya sanal kıyafet denemeleri yaparak kullanıcılar, ürünlerin nasıl görüneceğini keşfedebilirler.</p>
-        
-    </header>
 </body>
 </html>
