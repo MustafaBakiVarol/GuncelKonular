@@ -38,8 +38,7 @@ Uçak Oyunu projesi, çocuklar için eğlenceli ve eğitici artırılmış gerç
 
 --- 
 ## Tanıtım Videoları
--[Projenin Genel Tanıtım Videosu]()
--[Oyunların Tanıtım Videosu]()
+-[Projenin Genel Tanıtım Videosu](https://youtu.be/yJjRV82M-Kg)
 
 --- 
 
